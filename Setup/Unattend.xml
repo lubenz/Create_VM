@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="specialize">
+        <component language="neutral" versionScope="nonSxS" publicKeyToken="31bf3856ad364e35" processorArchitecture="amd64" name="Microsoft-Windows-Shell-Setup" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+            <ComputerName>1name</ComputerName>
+            <ProductKey>TMJ3Y-NTRTM-FJYXT-T22BY-CWG3J</ProductKey>
+            <RegisteredOrganization>1Organization</RegisteredOrganization>
+            <RegisteredOwner>1Organization</RegisteredOwner>
+        </component>        
+    </settings>
+    <settings pass="oobeSystem">
+        <component language="neutral" versionScope="nonSxS" publicKeyToken="31bf3856ad364e35" processorArchitecture="amd64" name="Microsoft-Windows-Shell-Setup" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+           <OOBE>
+                <HideEULAPage>true</HideEULAPage>
+                <NetworkLocation>Work</NetworkLocation>
+                <ProtectYourPC>3</ProtectYourPC>
+                <SkipUserOOBE>true</SkipUserOOBE>
+            </OOBE>
+            <UserAccounts>
+                <AdministratorPassword>
+                    <Value>1AdminPassword</Value>
+                    <PlainText>true</PlainText>
+                </AdministratorPassword>
+            </UserAccounts>
+            <TimeZone>Pacific Standard Time</TimeZone>
+        </component>
+        <component language="neutral" versionScope="nonSxS" publicKeyToken="31bf3856ad364e35" processorArchitecture="amd64" name="Microsoft-Windows-International-Core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+            <InputLocale>1039:0000040f</InputLocale>
+            <SystemLocale>is-IS</SystemLocale>
+            <UILanguage>is-IS</UILanguage>
+            <UserLocale>is-IS</UserLocale>
+            <UILanguageFallback>is-IS</UILanguageFallback>
+        </component>
+    </settings>
+    <cpi:offlineImage cpi:source="wim:c:/users/jonathansa/desktop/ws2012r2/sources/install.wim#Windows Server 2012 R2 SERVERDATACENTER" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+</unattend>
