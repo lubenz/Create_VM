@@ -81,10 +81,6 @@ Function Create_VM {
 
 2: Create Vm From Sysprep Template
 
-3: Make VM High Available
-
-4: Export Vm to file
-
 B: Back
 
 -----
@@ -95,21 +91,42 @@ Select a task by number or B to go back
 		Switch (Show-Menu $menu "Management Menu" -clear) {
 			"1" { Empty_Vm_Menu }
 			"2" { Template_Vm_Menu }
-			"3"  { Delete_Vm_Menu }
-			"4"  { Export_Vm_Menu }
 			"B" { MainMenu }
 			Default { Write-Warning "Invalid Choice. Try again."; sleep -milliseconds 750 }
 		}
 	} While ($True)
 }
 
+Function WORK_VM {
+    $menu = @"
 
+1: Make running VM highly available
+
+2: Convert VMDK to Vhdx
+
+3: Export Vm to file
+
+B: Back
+
+-----
+
+Select a task by number or B to go back
+"@
+    Do {
+        Switch (Show-Menu $menu "Management Menu" -clear) {
+            "1" { Vm_High }
+            "2" { Vm_Convert }
+            "3" { Vm_export }
+            "B" { MainMenu }
+            Default { Write-Warning "Invalid Choice. Try again."; sleep -milliseconds 750 }
+        }
+    } While ($True)
+}
 Function About {
 	
 	Write-Output "
     Author:		Benedikt G. Egilsson with help from the internet
-    Tested in lab environments, Use on your own risk.
-"
+    Tested in lab environments, Use on your own risk."
 	Read-Host "Press Enter to return to menu"
 }
 

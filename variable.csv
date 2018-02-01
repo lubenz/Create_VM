@@ -1,7 +1,4 @@
 name,value
-StartupFolder,"e:\ISO"
+StartupFolder,"e:\iso"
 template,"e:\template"
-UnattendLocation,"e:\ISO\unattend.xml"
 DPath,"c:\temp"
-SetupComplete,"e:\ISO\SetupComplete.cmd"
-setup,"e:\ISO\setup.ps1"

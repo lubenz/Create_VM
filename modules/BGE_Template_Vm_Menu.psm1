@@ -31,6 +31,10 @@ function Template_Vm_Menu {
                 cls
                 'You chose Windows 2016 Core'
                 $TemplateLocation = "$template\W2016Core_OS.vhdx"
+            } '4' {
+                cls
+                'You chose Windows 2016 Desktop'
+                $TemplateLocation = "$template\W2016Desktop_OS.vhdx"    
             } 'q' {
                 Return 
             }
